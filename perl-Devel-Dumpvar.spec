@@ -8,12 +8,12 @@
 Summary:	Devel::Dumpvar - a pure-OO reimplementation of dumpvar.pl
 Summary(pl):	Devel::Dumpvar - czysto obiektowo zorientowana reimplementacja dumpvar.pl
 Name:		perl-Devel-Dumpvar
-Version:	0.01
-Release:	2
+Version:	0.02
+Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	51c3c1c78178a2740304adca93e114f8
+# Source0-md5:	a9e65d920b1f6414e38a0cf2613cce48
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
