@@ -7,7 +7,7 @@
 %define	pnam	Dumpvar
 Summary:	Devel::Dumpvar - a pure-OO reimplementation of dumpvar.pl
 Summary(pl):	Devel::Dumpvar - czysto obiektowo zorientowana reimplementacja dumpvar.pl
-Name:		perl-%{pdir}-%{pnam}
+Name:		perl-Devel-Dumpvar
 Version:	0.01
 Release:	2
 License:	GPL v1+ or Artistic
