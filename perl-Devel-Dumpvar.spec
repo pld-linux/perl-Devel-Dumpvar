@@ -9,7 +9,7 @@ Summary:	Devel::Dumpvar - a pure-OO reimplementation of dumpvar.pl
 Summary(pl):	Devel::Dumpvar - czysto obiektowo zorientowana reimplementacja dumpvar.pl
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.01
-Release:	1
+Release:	2
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
