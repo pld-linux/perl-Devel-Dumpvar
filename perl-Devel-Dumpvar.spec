@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Devel
-%define	pnam	Dumpvar
+%define		pdir	Devel
+%define		pnam	Dumpvar
 Summary:	Devel::Dumpvar - a pure-OO reimplementation of dumpvar.pl
 Summary(pl):	Devel::Dumpvar - czysto obiektowo zorientowana reimplementacja dumpvar.pl
 Name:		perl-Devel-Dumpvar
