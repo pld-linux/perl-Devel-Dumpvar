@@ -1,31 +1,58 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Devel
 %define	pnam	Dumpvar
-Summary:	Devel::Dumpvar - A pure-OO reimplementation of dumpvar.pl
+Summary:	Devel::Dumpvar - a pure-OO reimplementation of dumpvar.pl
+Summary(pl):	Devel::Dumpvar - czysto obiektowo zorientowana reimplementacja dumpvar.pl
 Name:		perl-%{pdir}-%{pnam}
 Version:	0.01
 Release:	1
-License:	GPL/Artistic
+License:	GPL or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	51c3c1c78178a2740304adca93e114f8
-BuildRequires:	perl-devel >= 5.005
-%if %{!?_without_tests:1}0
-%endif
+BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Most perl dumping modules are focused on serializing data structures
+Most Perl dumping modules are focused on serializing data structures
 into a format that can be rebuilt into the original data structure.
 They do this with a variety of different focuses, such as human
 readability, the ability to execute the dumped code directly, or to
 minimize the size of the dumped data.
+
+Expect for the one contained in the debugger, in the file dumpvar.pl.
+This is a readily human-readable form, highly useful for debugging,
+containing a lot of extra information without the burden of needing to
+be re-assembled into the original data.
+
+Devel::Dumpvar is a pure object-orientated implementation of the same
+functionality made as a module. This makes it much more usable version
+to use for dumping information to debug log files or other uses where
+you don't need to reassemble the data.
+
+%description -l pl
+Wiêkszo¶æ perlowych modu³ów wykonuj±cych zrzuty skupia siê na
+serializacji struktur danych do formatu, z którego mo¿na zbudowaæ
+oryginaln± strukturê danych. Robi± to skupiaj±c siê na wielu ró¿nych
+zastosowaniach, takich jak czytelno¶æ dla cz³owieka, mo¿liwo¶æ
+bezpo¶redniego wykonania wyprodukowanego kodu lub zminimalizowaniu
+rozmiaru zrzuconych danych.
+
+Jeden fragment kodu jest wyj±tkiem, zawarty jest w debuggerze, w pliku
+dumpvar.pl. Daje ³atwo czyteln± dla cz³owieka postaæ danych, bardzo
+przydatn± przy odpluskwianiu, zawieraj±c± wiele dodatkowych informacji
+nie obci±¿onych potrzeb± ponownego sk³adania oryginalnych danych.
+
+Devel::Dumpvar jest czysto obiektowo zorientowan± implementacj± tej
+samej funkcjonalno¶ci wykonan± jako modu³ Perla. Czyni to go du¿o
+bardziej u¿yteczn± wersj± do zrzucania informacji do debugowych plików
+logów lub innych zastosowañ gdzie nie trzeba ponownie sk³adaæ danych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
@@ -35,18 +62,19 @@ minimize the size of the dumped data.
 	INSTALLDIRS=vendor
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc LICENSE Changes README
-%{perl_vendorlib}/%{pdir}/%{pnam}.pm
+%doc Changes README
+%{perl_vendorlib}/Devel/Dumpvar.pm
 %{_mandir}/man3/*
