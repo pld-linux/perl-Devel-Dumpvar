@@ -6,7 +6,7 @@
 %define		pdir	Devel
 %define		pnam	Dumpvar
 Summary:	Devel::Dumpvar - a pure-OO reimplementation of dumpvar.pl
-Summary(pl):	Devel::Dumpvar - czysto obiektowo zorientowana reimplementacja dumpvar.pl
+Summary(pl.UTF-8):   Devel::Dumpvar - czysto obiektowo zorientowana reimplementacja dumpvar.pl
 Name:		perl-Devel-Dumpvar
 Version:	0.02
 Release:	1
@@ -36,23 +36,23 @@ functionality made as a module. This makes it much more usable version
 to use for dumping information to debug log files or other uses where
 you don't need to reassemble the data.
 
-%description -l pl
-Wiêkszo¶æ perlowych modu³ów wykonuj±cych zrzuty skupia siê na
-serializacji struktur danych do formatu, z którego mo¿na zbudowaæ
-oryginaln± strukturê danych. Robi± to skupiaj±c siê na wielu ró¿nych
-zastosowaniach, takich jak czytelno¶æ dla cz³owieka, mo¿liwo¶æ
-bezpo¶redniego wykonania wyprodukowanego kodu lub zminimalizowaniu
+%description -l pl.UTF-8
+WiÄ™kszoÅ›Ä‡ perlowych moduÅ‚Ã³w wykonujÄ…cych zrzuty skupia siÄ™ na
+serializacji struktur danych do formatu, z ktÃ³rego moÅ¼na zbudowaÄ‡
+oryginalnÄ… strukturÄ™ danych. RobiÄ… to skupiajÄ…c siÄ™ na wielu rÃ³Å¼nych
+zastosowaniach, takich jak czytelnoÅ›Ä‡ dla czÅ‚owieka, moÅ¼liwoÅ›Ä‡
+bezpoÅ›redniego wykonania wyprodukowanego kodu lub zminimalizowaniu
 rozmiaru zrzuconych danych.
 
-Jeden fragment kodu jest wyj±tkiem, zawarty jest w debuggerze, w pliku
-dumpvar.pl. Daje ³atwo czyteln± dla cz³owieka postaæ danych, bardzo
-przydatn± przy odpluskwianiu, zawieraj±c± wiele dodatkowych informacji
-nie obci±¿onych potrzeb± ponownego sk³adania oryginalnych danych.
+Jeden fragment kodu jest wyjÄ…tkiem, zawarty jest w debuggerze, w pliku
+dumpvar.pl. Daje Å‚atwo czytelnÄ… dla czÅ‚owieka postaÄ‡ danych, bardzo
+przydatnÄ… przy odpluskwianiu, zawierajÄ…cÄ… wiele dodatkowych informacji
+nie obciÄ…Å¼onych potrzebÄ… ponownego skÅ‚adania oryginalnych danych.
 
-Devel::Dumpvar jest czysto obiektowo zorientowan± implementacj± tej
-samej funkcjonalno¶ci wykonan± jako modu³ Perla. Czyni to go du¿o
-bardziej u¿yteczn± wersj± do zrzucania informacji do debugowych plików
-logów lub innych zastosowañ gdzie nie trzeba ponownie sk³adaæ danych.
+Devel::Dumpvar jest czysto obiektowo zorientowanÄ… implementacjÄ… tej
+samej funkcjonalnoÅ›ci wykonanÄ… jako moduÅ‚ Perla. Czyni to go duÅ¼o
+bardziej uÅ¼ytecznÄ… wersjÄ… do zrzucania informacji do debugowych plikÃ³w
+logÃ³w lub innych zastosowaÅ„ gdzie nie trzeba ponownie skÅ‚adaÄ‡ danych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
