@@ -4,7 +4,6 @@
 
 %define		pdir	Devel
 %define		pnam	Dumpvar
-%include	/usr/lib/rpm/macros.perl
 Summary:	Devel::Dumpvar - a pure-OO reimplementation of dumpvar.pl
 Summary(pl.UTF-8):	Devel::Dumpvar - czysto obiektowo zorientowana reimplementacja dumpvar.pl
 Name:		perl-Devel-Dumpvar
